@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coding-blocks/bootstrap@4.5.2/dist/css/bootstrap.min.css" integrity="sha384-qQEE8jdKJvtljxvtgWREfDOl721Sa1Qs8a1huL0PjJo3duiJ2wXnwTIRnbd/cTjY" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+</style>
+</head>
+
+<body>
+<div id="signup">
+<h1 style="font-family: 'Nerko One', cursive; text-align:center;">Login</h1>
+
+<% if(success_message != '')  {    %>
+
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong> <%= success_message %>   </strong>
+</div>
+
+<% } %>
+
+<% if(error != ''){%>
+  <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><%= error %></strong> 
+  </div>
+     <% } %>
+
+
+
+
+
+<div class="container" id="signupform">
+<form class="col-md-6" action="/login" method="POST">
+ <div class="form-group my-2">
+ <label for="exampleInputEmail1" style="color:red;width:100%; text-align:center;">Username</label>
+ <input type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+ </div>
+ 
+ 
+ 
+<div class="form-group">
+ <label for="exampleInputPassword1" style="color:red; width:100%; text-align:center;">Password</label>
+ <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+</div>
+
+ <div>
+ <button type="submit" class="btn btn-primary text-center">Submit</button>
+ <span class="ml-2">Don't have account?</span><a href="/register" class="mr-1" style="color:blue;">RegisterNow</a>
+</div>
+</form>
+</div>
+
+</body>
+</html>
+
+</div>
+
+

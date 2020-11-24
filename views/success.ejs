@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@coding-blocks/bootstrap@4.5.2/dist/css/bootstrap.min.css" integrity="sha384-qQEE8jdKJvtljxvtgWREfDOl721Sa1Qs8a1huL0PjJo3duiJ2wXnwTIRnbd/cTjY" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <div class="container text-center">
+    <h2>Welcome <%= user %> </h2>
+<a class="btn btn-primary" href="/logout">Logout</a>
+    <form action="/addmsg" method="POST">
+    
+        <div class="form-group my-2">
+          <label for="exampleFormControlTextarea1" style="font-weight: bold;">Enter your Notes</label>
+          <textarea class="form-control" name="notes" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+       
+        <button class="btn btn-success">Add Message</button>
+      </form>
+    </div>
+
+
+<div class="container">
+<% if(typeof userposts !='undefined') { %>
+  
+    <% userposts.forEach(function(msg,index){ %>
+      <h5 class="text-center" style="color:rgb(153, 11, 35);"><%= msg  %></h5>
+      <% }) %>
+  
+<% } %>
+
+</div
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@coding-blocks/bootstrap@4.5.2/dist/js/bootstrap.min.js" integrity="sha384-5kiNX2pRMEoJOeg8N1XzHzWAotDv8A4fZW6cFGvsDgSZmMuECwtOeZ1ta0eO7DBD" crossorigin="anonymous"></script>
+  </body>
+</html>
